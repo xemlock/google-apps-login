@@ -3,7 +3,7 @@ Contributors: danlester
 Tags: login, google, authentication, oauth2, oauth, google login, google apps, sso, single-sign-on, auth, intranet
 Requires at least: 3.7
 Tested up to: 4.3
-Stable tag: 2.8.3
+Stable tag: 2.8.11
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -225,6 +225,14 @@ the WordPress admin panel once you have activated the plugin. For a (non-persona
 please [click here](http://wp-glogin.com/installing-google-apps-login/basic-setup/).
 
 == Changelog ==
+
+= 2.8.11 =
+
+Service Account Client ID is imported from JSON key file so user can copy and paste it into admin.google.com
+
+= 2.8.10 =
+
+Changed name of login cookie from 'google_apps_login' to 'wp_google_apps_login'.
 
 = 2.8.3 =
 
