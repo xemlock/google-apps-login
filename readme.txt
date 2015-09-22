@@ -74,6 +74,7 @@ This plugin currently operates in the following languages:
 * Serbo-Croatian (sr_RS) - translated by Borisa Djuraskovic of [Web Hosting Hub](http://www.webhostinghub.com/)
 * Arabic (ar_SA) - translated by [Jeremy Varnham](http://profiles.wordpress.org/jvarn13)
 * Ukrainian (uk_UA) - translated by Serj Kondrashov
+* Dutch (nl_NL) - translated by Noell Taravati of [Peppix](http://www.peppix.nl/)
 
 We are looking for volunteers to translate into their own language. If you would like to contribute a translation, please 
 use the template POT file in the 'lang' folder, then email PO and MO files to contact@wp-glogin.com. 
