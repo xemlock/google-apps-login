@@ -75,6 +75,8 @@ This plugin currently operates in the following languages:
 * Arabic (ar_SA) - translated by [Jeremy Varnham](http://profiles.wordpress.org/jvarn13)
 * Ukrainian (uk_UA) - translated by Serj Kondrashov
 * Dutch (nl_NL) - translated by Noell Taravati of [Peppix](http://www.peppix.nl/)
+* Swedish (sv_SE) - translated by Johan Linde of [S/Y ELLEN](http://syellen.se/)
+* Italian (it_IT) translated by Giorgio Draghetti of [tipinoncomuni](http://tipinoncomuni.it/)
 
 We are looking for volunteers to translate into their own language. If you would like to contribute a translation, please 
 use the template POT file in the 'lang' folder, then email PO and MO files to contact@wp-glogin.com. 
