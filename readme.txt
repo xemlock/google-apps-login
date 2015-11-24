@@ -25,7 +25,7 @@ Full support and premium features are also available for purchase:
 Eliminate the need for Google Apps domain admins to separately manage WordPress user accounts, and get peace
 of mind that only authorized employees have access to your organizations's websites and intranet.
 
-See [our website at wp-glogin.com](http://wp-glogin.com/glogin/?utm_source=Login%20Readme%20Top&utm_medium=freemium&utm_campaign=Freemium) for more details.
+**See [our website at wp-glogin.com](http://wp-glogin.com/glogin/?utm_source=Login%20Readme%20Top&utm_medium=freemium&utm_campaign=Freemium) for more details.**
 
 The Premium version allows everyone in your Google Apps domain to login to WordPress - an account will be automatically created in WordPress if one doesn't already exist.
 
