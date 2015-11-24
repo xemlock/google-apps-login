@@ -25,7 +25,7 @@ msgid "In this basic version of the plugin, any <i>existing</i> WordPress accoun
 msgstr ""
 
 #: basic_google_apps_login.php:206
-msgid "Completely forget about WordPress user management - upgrade to <a href=\"%s\">Google Apps Login premium</a> to automatically sync users from your Google Apps domain"
+msgid "Completely forget about WordPress user management - upgrade to <a href=\"%s\">Google Apps Login Premium or Enterprise</a> to automatically sync users from your Google Apps domain"
 msgstr ""
 
 #: basic_google_apps_login.php:208
