@@ -3,7 +3,7 @@ Contributors: danlester
 Tags: login, google, authentication, oauth2, oauth, google login, google apps, sso, single-sign-on, auth, intranet
 Requires at least: 3.7
 Tested up to: 4.4
-Stable tag: 2.8.15
+Stable tag: 2.8.16
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -196,7 +196,7 @@ your emails and other data.
 = What are the system requirements? =
 
 *  PHP 5.2.x or higher with JSON extensions
-*  Wordpress 3.3 or above
+*  Wordpress 3.5 or above
 
 And you will need a Google account to set up the plugin.
 
@@ -225,6 +225,10 @@ the WordPress admin panel once you have activated the plugin. For a (non-persona
 please [click here](http://wp-glogin.com/installing-google-apps-login/basic-setup/).
 
 == Changelog ==
+
+= 2.8.16 =
+
+Updated to work correctly alongside some plugins that change the login URL from /wp-login.php to something else.
 
 = 2.8.15 =
 

@@ -421,7 +421,7 @@ class core_google_apps_login {
 	}
 	
 	public function ga_init() {
-		if ($GLOBALS['pagenow'] == 'wp-login.php') {
+		if (!isset($_COOKIE[self::$gal_cookie_name])) {
 			setcookie(self::$gal_cookie_name, $this->get_cookie_value(), time()+36000, '/', defined(COOKIE_DOMAIN) ? COOKIE_DOMAIN : '' );
 		}
 	}
