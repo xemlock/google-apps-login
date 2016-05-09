@@ -32,9 +32,6 @@ The Premium version allows everyone in your Google Apps domain to login to WordP
 Our Enterprise version goes further, allowing you to specify granular access and role controls based on Google Group membership.
 You can also see logs of accounts created and roles changed by the plugin.
 
-
-[youtube http://www.youtube.com/watch?v=wz9aN_4WaM8]
-
 = Extensible Platform =
 
 Google Apps Login allows you to centralize your site's Google functionality and build your own extensions, or use
