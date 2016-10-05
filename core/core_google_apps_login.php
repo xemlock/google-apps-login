@@ -43,7 +43,7 @@ class core_google_apps_login {
 	private $doneIncludePath = false;
 	private function setIncludePath() {
 		if (!$this->doneIncludePath) {
-			set_include_path(get_include_path() . PATH_SEPARATOR . plugin_dir_path(__FILE__));
+			set_include_path(plugin_dir_path(__FILE__) . PATH_SEPARATOR . get_include_path());
 			$this->doneIncludePath = true;
 		}
 	}
@@ -546,25 +546,21 @@ class core_google_apps_login {
 			$this->set_other_admin_notices();
 		}
 		
-		add_action('show_user_profile', Array($this, 'ga_personal_options'));
+		add_action('user_profile_picture_description', Array($this, 'gal_user_profile_picture_description'));
 	}
 	
-	public function ga_personal_options($wp_user) {
-		if (is_object($wp_user)) {
-		// Display avatar in profile
-		$purchase_url = 'http://wp-glogin.com/avatars/?utm_source=Profile%20Page&utm_medium=freemium&utm_campaign=Avatars';
-		$source_text = 'Install <a href="'.$purchase_url.'">Google Profile Avatars</a> to use your Google account\'s profile photo here automatically.';
-		?>
-		<table class="form-table">
-			<tbody><tr>
-				<th>Profile Photo</th>
-				<td><?php echo get_avatar($wp_user->ID, '48'); ?></td>
-				<td><?php echo apply_filters('gal_avatar_source_desc', $source_text, $wp_user); ?></td>
-			</tr>
-			</tbody>
-		</table>
-		<?php
+	public function gal_user_profile_picture_description($description) {
+		if ($description != '') {
+
+			// Display avatar in profile
+			$purchase_url = 'http://wp-glogin.com/avatars/?utm_source=Profile%20Page&utm_medium=freemium&utm_campaign=Avatars';
+			$source_text = '<b>Install <a href="'.$purchase_url.'">Google Profile Avatars</a> to use your Google account\'s profile photo here automatically.</b>';
+
+			$wp_user = wp_get_current_user();
+			$description = apply_filters('gal_avatar_source_desc', $description.' <br /> '.$source_text, $wp_user);
 		}
+
+		return $description;
 	}
 	
 	// Has content in Basic
@@ -1030,7 +1026,7 @@ class core_google_apps_login {
 			}
 		}
 		
-		$this->ga_options = $option;
+		$this->ga_options = apply_filters( 'gal_options', $option );
 		return $this->ga_options;
 	}
 	
@@ -1074,7 +1070,7 @@ class core_google_apps_login {
 			}
 		}
 		
-		$this->ga_sa_options = $ga_sa_options;
+		$this->ga_sa_options = apply_filters('gal_sa_options', $ga_sa_options );
 		return $this->ga_sa_options;
 	}
 	

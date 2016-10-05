@@ -3,7 +3,7 @@ Contributors: danlester
 Tags: login, google, authentication, oauth2, oauth, google login, google apps, sso, single-sign-on, auth, intranet
 Requires at least: 3.7
 Tested up to: 4.6
-Stable tag: 2.9.7
+Stable tag: 2.10.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -225,6 +225,16 @@ the WordPress admin panel once you have activated the plugin. For a (non-persona
 please [click here](http://wp-glogin.com/installing-google-apps-login/basic-setup/).
 
 == Changelog ==
+
+= 2.10.4 =
+
+Ensures plugin options are not loaded until 'plugins_loaded' stage. This makes it easier to use the gal_options hook more reliably.
+
+Added language files for be_BY.
+Added filters 'gal_options' and 'gal_sa_options' so you can configure settings using PHP code.
+
+Changed the way Google client library is included to avoid conflicts with other Google-related plugins that set the include path
+in a way that doesn't allow for other plugins.
 
 = 2.9.7 =
 
