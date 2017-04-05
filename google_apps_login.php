@@ -175,7 +175,7 @@ class basic_google_apps_login extends core_google_apps_login {
 		</ul>
 		
 		<p>Find out more about purchase options on our website:
-		<a href="http://wp-glogin.com/google-apps-login-premium/?utm_source=Domain%20Control&utm_medium=freemium&utm_campaign=Freemium" target="_blank">http://wp-glogin.com/</a>
+		<a href="https://wp-glogin.com/glogin/?utm_source=Domain%20Control&utm_medium=freemium&utm_campaign=Freemium" target="_blank">http://wp-glogin.com/</a>
 		</p>
 		
 		<?php
