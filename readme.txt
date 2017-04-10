@@ -82,6 +82,7 @@ This plugin currently operates in the following languages:
 * Italian (it_IT) - translated by Giorgio Draghetti of [tipinoncomuni](http://tipinoncomuni.it/)
 * Persian (fa_IR) - translated by [Saeed1000](https://profiles.wordpress.org/saeed1000/)
 * Belarussian (be_BY) - translated by Natasha Dyatko of [UStarCash](https://www.ustarcash.com/)
+* Indonesian (id_ID) - translated by Jordan Silaen of [ChameleonJohn.com](http://ChameleonJohn.com/)
 
 We welcome volunteers to translate into their own language. If you would like to contribute a translation, please click Translate under Contributors & Developers below.
 
