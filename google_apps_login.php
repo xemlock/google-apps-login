@@ -171,7 +171,7 @@ class basic_google_apps_login extends core_google_apps_login {
 			<li>Save time and increase security</li>
 			<li>Completely forget about WordPress user management &ndash; it syncs users from G Suite (Google Apps) automatically</li>
 			<li>Ensures that employees who leave or change roles no longer have unauthorized access to sensitive sites</li>
-			<li>Specify Google Groups whose members should be mapped to different roles in WordPress (Enterprise only)</li>
+			<li>Specify Google Groups or Organizational Units whose members should be mapped to different roles in WordPress (Enterprise only)</li>
 		</ul>
 		
 		<p>Find out more about purchase options on our website:

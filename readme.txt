@@ -32,7 +32,7 @@ of mind that only authorized employees have access to your organizations's websi
 
 The Premium version allows everyone in your G Suite (Google Apps) domain to login to WordPress - an account will be automatically created in WordPress if one doesn't already exist.
 
-Our Enterprise version goes further, allowing you to specify granular access and role controls based on Google Group membership.
+Our Enterprise version goes further, allowing you to specify granular access and role controls based on Google Group or Organizational Unit membership.
 You can also see logs of accounts created and roles changed by the plugin.
 
 
