@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: danlester
+Contributors: levertechadmin, danlester
 Tags: login, google, authentication, oauth, google login, google apps, g suite, sso, single-sign-on, auth, intranet
 Requires at least: 4.0
 Tested up to: 4.9
