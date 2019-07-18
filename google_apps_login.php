@@ -5,7 +5,7 @@
  * Plugin URI: http://wp-glogin.com/
  * Description: Simple secure login for Wordpress through users' Google Apps accounts (uses secure OAuth2, and MFA if enabled)
  * Version: 3.2
- * Author: Lever Technologies
+ * Author: Lever Technology LLC
  * Author URI: http://wp-glogin.com/
  * License: GPL3
  * Network: true

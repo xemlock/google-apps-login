@@ -1,8 +1,8 @@
 === Plugin Name ===
-Contributors: levertechadmin, danlester
+Contributors: levertechadmin
 Tags: login, google, authentication, oauth, google login, google apps, g suite, sso, single-sign-on, auth, intranet
 Requires at least: 4.0
-Tested up to: 4.9
+Tested up to: 5.2.2
 Stable tag: 3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
