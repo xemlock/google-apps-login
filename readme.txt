@@ -2,7 +2,7 @@
 Contributors: levertechadmin
 Tags: login, google, authentication, oauth, google login, google apps, g suite, sso, single-sign-on, auth, intranet
 Requires at least: 4.0
-Tested up to: 5.3
+Tested up to: 5.3.1
 Stable tag: 3.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -202,8 +202,7 @@ the WordPress admin panel once you have activated the plugin. For a (non-persona
 Added permission check functionality
 Added Google Drive Embedder insufficient permission error fixes
 Added Login With Google buttons branding
-
-Updated compatibility with the WordPress 5.3 release
+Updated compatibility with the WordPress 5.3.1 release
 
 = 3.2 =
 
