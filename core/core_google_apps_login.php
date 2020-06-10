@@ -113,24 +113,31 @@ class core_google_apps_login {
 		 ?>
 		<style type="text/css">
 			form#loginform p.galogin {
-				background: none repeat scroll 0 0 #2EA2CC;
-				border-color: #0074A2;
-				box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
-				color: #FFFFFF;
-				text-decoration: none;
-				text-align: center;
-				vertical-align: middle;
-				border-radius: 3px;
-				padding: 4px;
-				font-size: 14px;
-				margin-bottom: 0px;
-			    overflow: hidden;
-			    display: flex;
-			    justify-content: center;
-			    align-items: center;
-			    height: auto;
+
+					background: none repeat scroll 0 0 #2EA2CC;
+					border-color: #0074A2;
+					box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+					color: #00669b;
+					text-decoration: none;
+					text-align: center;
+					vertical-align: middle;
+					border-radius: 3px;
+					padding: 4px;
+					font-size: 14px;
+					margin-bottom: 5px;
+				    overflow: hidden;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    height: auto;
+				
 			}
 			
+			/*form#loginform p.galogin a {
+				color: #00669b;
+				line-height: 27px;
+				font-weight: bold;
+			}*/
 			form#loginform p.galogin a {
 			    color: #00669b;
 			    line-height: 27px;
@@ -204,7 +211,7 @@ class core_google_apps_login {
 			div#login form#loginform p.submit,
 			div#login p#nav {
 				display: none;
-			}
+			} 
 			 
 			<?php } ?>
 			p.galogin a {
@@ -276,9 +283,12 @@ class core_google_apps_login {
 		
 ?>
 		<?php 
+
+	if (isset($options['ga_disableGlogin']) && $options['ga_disableGlogin']!=1) {
+
 		if(isset($options['btn_google_signin_image']) && !empty($options['btn_google_signin_image']) && $options['btn_google_signin_image'] != 'custom_text'){
 					$loginWithGoogleImage = $options['btn_google_signin_image'];
-					$LoginWithGoogleButton = '<a href="'.$authUrl.'"><img alt="Login With Google" src="'.$this->my_plugin_url().'img/'.$loginWithGoogleImage.'.png"/></a>';
+					$LoginWithGoogleButton = '<a href="'.$authUrl.'"><img src="'.$this->my_plugin_url().'img/'.$loginWithGoogleImage.'.png"/></a>';
 				}elseif (isset($options['btn_google_signin_image']) && !empty($options['btn_google_signin_image']) && $options['btn_google_signin_image'] == 'custom_text') {
 					if (isset($options['ga_loginbuttontext']) && !empty($options['ga_loginbuttontext'])) {
 						$buttonCutomText = 	$options['ga_loginbuttontext'];
@@ -289,46 +299,46 @@ class core_google_apps_login {
 				}
 				else{
 					$loginWithGoogleImage = 'btn_google_signin_dark_normal_web';
-					$LoginWithGoogleButton = '<a href="'.$authUrl.'"><img alt="Login With Google" src="'.$this->my_plugin_url().'img/'.$loginWithGoogleImage.'.png" /></a>';
+					$LoginWithGoogleButton = '<a href="'.$authUrl.'"><img src="'.$this->my_plugin_url().'img/'.$loginWithGoogleImage.'.png" /></a>';
 				}
-		?>
+				?>
 				<p class="galogin" style="cursor: pointer;background: none;box-shadow: none;">
 					<?php echo $LoginWithGoogleButton; ?>
 				</p>
+				
+				<?php if ($options['ga_poweredby']) { ?>
+				<p class='galogin-powered'><?php esc_html_e( 'Powered by ' , 'google-apps-login'); ?><a href='https://wp-glogin.com/?utm_source=Login%20Form&utm_medium=freemium&utm_campaign=LoginForm' target="_blank">wp-glogin.com</a></p>
+				<?php } ?>
 
-		
-		<?php if ($options['ga_poweredby']) { ?>
-		<p class='galogin-powered'><?php esc_html_e( 'Powered by ' , 'google-apps-login'); ?><a href='https://wp-glogin.com/?utm_source=Login%20Form&utm_medium=freemium&utm_campaign=LoginForm' target="_blank">wp-glogin.com</a></p>
-		<?php } ?>
-		
-		<script>
-		jQuery(document).ready(function(){
-			<?php ob_start(); /* Buffer javascript contents so we can run it through a filter */ ?>
-			
-			var loginform = jQuery('#loginform,#front-login-form');
-			var googlelink = jQuery('p.galogin');
-			var poweredby = jQuery('p.galogin-powered');
+				<script>
+				jQuery(document).ready(function(){
+					<?php ob_start(); /* Buffer javascript contents so we can run it through a filter */ ?>
+					
+					var loginform = jQuery('#loginform,#front-login-form');
+					var googlelink = jQuery('p.galogin');
+					var poweredby = jQuery('p.galogin-powered');
 
-			<?php if ($this->should_hidewplogin($options)) { ?>
-				loginform.empty();
-			<?php 
-			} else {
-			?>
-				loginform.prepend("<h3 class='galogin-or'><?php esc_html_e( 'or' , 'google-apps-login'); ?></h3>");
-			<?php } ?>
-			
-			if (poweredby) {
-				loginform.prepend(poweredby);
-			}
-			loginform.prepend(googlelink);
+					<?php if ($this->should_hidewplogin($options)) { ?>
+						loginform.empty();
+					<?php 
+					} else {
+					?>
+						loginform.prepend("<h3 class='galogin-or'><?php esc_html_e( 'or' , 'google-apps-login'); ?></h3>");
+					<?php } ?>
+					
+					if (poweredby) {
+						loginform.prepend(poweredby);
+					}
+					loginform.prepend(googlelink);
 
-			<?php 
-				$fntxt = ob_get_clean(); 
-				echo apply_filters('gal_login_form_readyjs', $fntxt);
-			?>
-		});
-		</script>
-<?php 	
+					<?php 
+						$fntxt = ob_get_clean(); 
+						echo apply_filters('gal_login_form_readyjs', $fntxt);
+					?>
+				});
+				</script>
+
+<?php }  	
 	}
 	
 	protected function get_login_button_text() {
@@ -525,7 +535,7 @@ class core_google_apps_login {
 		}
 		if (!isset($_COOKIE[self::$gal_cookie_name]) && apply_filters('gal_set_login_cookie', true)) {
 			$secure = ( 'https' === parse_url( $this->get_login_url(), PHP_URL_SCHEME ) );
-			setcookie(self::$gal_cookie_name, $this->get_cookie_value(), 0, '/', defined('COOKIE_DOMAIN') ? COOKIE_DOMAIN : '', $secure, true );
+			setcookie(self::$gal_cookie_name, $this->get_cookie_value(), 0, '/', defined('COOKIE_DOMAIN') ? COOKIE_DOMAIN : '', $secure,true );
 		}
 	}
 	
@@ -965,6 +975,7 @@ class core_google_apps_login {
 		echo '</p>';
 
 		$options = $this->get_option_galogin();
+		
 		echo "<input id='input_ga_force_permissions' name='".$this->get_options_name()."[ga_force_permissions]' type='checkbox' ".($options['ga_force_permissions'] ? 'checked' : '')." class='checkbox' />";
 		echo '<label for="input_ga_force_permissions" class="checkbox plain">';
 		_e( 'Force user to confirm Google permissions every time' , 'google-apps-login' );
@@ -993,6 +1004,8 @@ class core_google_apps_login {
 		echo '<label for="input_ga_poweredby" class="checkbox plain">';
 		_e( 'Display \'Powered By wp-glogin.com\' on Login form' , 'google-apps-login' );
 		echo '</label>';
+		
+		$this->ga_advancedsection_extra();
 
 		echo '<br class="clear" />';
 		
@@ -1000,37 +1013,37 @@ class core_google_apps_login {
 		    <legend class="blocktitle">Login With Google Button Styles</legend>';
 		echo "<input id='btn_google_signin_image1' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_dark_focus_web' type='radio' ".($options['btn_google_signin_image'] == 'btn_google_signin_dark_focus_web' ? 'checked' : '')." class='checkbox' />";
 		
-		echo '<img alt="Login With Google Dark" src="'.$this->my_plugin_url().'img/btn_google_signin_dark_focus_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_dark_focus_web.png" />';
 
 		echo '<br class="clear" />';
 		
 		echo "<input id='btn_google_signin_image2' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_dark_normal_web' ".($options['btn_google_signin_image'] == 'btn_google_signin_dark_normal_web' ? 'checked' : '')." type='radio' class='checkbox' />";
 		
-		echo '<img alt="Login With Google Normal" src="'.$this->my_plugin_url().'img/btn_google_signin_dark_normal_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_dark_normal_web.png" />';
 
 		echo '<br class="clear" />';
 		
 		echo "<input id='btn_google_signin_image3' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_dark_pressed_web' ".($options['btn_google_signin_image'] == 'btn_google_signin_dark_pressed_web' ? 'checked' : '')." type='radio' class='checkbox' />";
 		
-		echo '<img alt="Login With Google Dark Pressed" src="'.$this->my_plugin_url().'img/btn_google_signin_dark_pressed_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_dark_pressed_web.png" />';
 
 		echo '<br class="clear" />';
 		
 		echo "<input id='btn_google_signin_image4' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_light_focus_web' ".($options['btn_google_signin_image'] == 'btn_google_signin_light_focus_web' ? 'checked' : '')." type='radio' class='checkbox' />";
 		
-		echo '<img alt="Login With Google Light" src="'.$this->my_plugin_url().'img/btn_google_signin_light_focus_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_light_focus_web.png" />';
 
 		echo '<br class="clear" />';
 		
 		echo "<input id='btn_google_signin_image5' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_light_normal_web' ".($options['btn_google_signin_image'] == 'btn_google_signin_light_normal_web' ? 'checked' : '')." type='radio' class='checkbox' />";
 		
-		echo '<img alt="Login With Google Light Normal" src="'.$this->my_plugin_url().'img/btn_google_signin_light_normal_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_light_normal_web.png" />';
 
 		echo '<br class="clear" />';
 		
 		echo "<input id='btn_google_signin_image6' name='".$this->get_options_name()."[btn_google_signin_image]' value='btn_google_signin_light_pressed_web' ".($options['btn_google_signin_image'] == 'btn_google_signin_light_pressed_web' ? 'checked' : '')." type='radio' class='checkbox' />";
 		
-		echo '<img alt="Login With Google Light Pressed" src="'.$this->my_plugin_url().'img/btn_google_signin_light_pressed_web.png" />';
+		echo '<img src="'.$this->my_plugin_url().'img/btn_google_signin_light_pressed_web.png" />';
 
 		echo '<br class="clear" />';
 		
@@ -1040,9 +1053,7 @@ class core_google_apps_login {
 						.esc_attr($options['ga_loginbuttontext']).'" class="textinput" maxlength="30" placeholder="'.esc_attr__( 'Login with Google' , 'google-apps-login').'" />';
 
 		echo '</fieldset>';
-		$this->ga_advancedsection_extra();
-		
-		echo '<br class="clear" />';
+
 		
 		if (is_multisite()) {
 			echo '<h3>'.__( 'Multisite Options' , 'google-apps-login').'</h3><p>';
@@ -1086,7 +1097,6 @@ class core_google_apps_login {
 			'error'
 			);
 		}
-
 		$newinput['ga_ms_usesubsitecallback'] = isset($input['ga_ms_usesubsitecallback']) ? (boolean)$input['ga_ms_usesubsitecallback'] : false;
 		$newinput['ga_force_permissions'] = isset($input['ga_force_permissions']) ? (boolean)$input['ga_force_permissions'] : false;
 		$newinput['ga_auto_login'] = isset($input['ga_auto_login']) ? (boolean)$input['ga_auto_login'] : false;
@@ -1094,7 +1104,8 @@ class core_google_apps_login {
 		$newinput['ga_rememberme'] = isset($input['ga_rememberme']) ? (boolean)$input['ga_rememberme'] : false;
 		$newinput['btn_google_signin_image'] = isset($input['btn_google_signin_image']) ? $input['btn_google_signin_image'] : 'btn_google_signin_dark_normal_web';
 		$newinput['ga_loginbuttontext'] = isset($input['ga_loginbuttontext']) ? $input['ga_loginbuttontext'] : 'Login with Google';
-
+		
+		
 		// Service account settings
 		$newinput['ga_domainadmin'] = isset($input['ga_domainadmin']) ? trim($input['ga_domainadmin']) : '';
 		if (!preg_match('/^([A-Za-z0-9._%+-]+@([0-9a-z-]+\.)*[0-9a-z-]+\.[a-z]{2,63})?$/', $newinput['ga_domainadmin'])) {
@@ -1176,6 +1187,7 @@ class core_google_apps_login {
 						'ga_auto_login' => false,
 						'ga_poweredby' => false,
 						'btn_google_signin_image'=>'btn_google_signin_dark_normal_web',
+						'ga_loginbuttontext' => '',
 						'ga_rememberme' => false,
 						'ga_sakey' => '',
 						'ga_domainadmin' => '');
