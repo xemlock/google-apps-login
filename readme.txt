@@ -95,10 +95,9 @@ The [Premium and Enterprise versions](https://wp-glogin.com/glogin/?utm_source=L
 If you are building your organization's intranet on WordPress, try out our [All-In-One Intranet plugin](https://wp-glogin.com/intranet/?utm_source=Login%20Readme%20AIOI&utm_medium=freemium&utm_campaign=Freemium).
 
 == Screenshots ==
-
-1. User login screen can work as normal or via Google's authentication system
-2. Login to Google account - only if not already logged in to Google within the browser
-3. First time only grant permissions for Google to connect to the WordPress site
+1. User will get different styles options for login with google button 
+2. User login screen can work as normal or via Google's authentication system
+3. Login to Google account - only if not already logged in to Google within the browser
 4. Admin obtains two simple codes from Google to set up - easy instructions to follow 
 
 == Frequently Asked Questions ==
