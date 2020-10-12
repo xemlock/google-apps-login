@@ -2,8 +2,8 @@
 Contributors: levertechadmin
 Tags: login, google, authentication, oauth, google login, google apps, g suite, sso, single-sign-on, auth, intranet
 Requires at least: 4.0
-Tested up to: 5.4.1
-Stable tag: 3.4.2
+Tested up to: 5.5.1
+Stable tag: 3.4.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -95,7 +95,8 @@ The [Premium and Enterprise versions](https://wp-glogin.com/glogin/?utm_source=L
 If you are building your organization's intranet on WordPress, try out our [All-In-One Intranet plugin](https://wp-glogin.com/intranet/?utm_source=Login%20Readme%20AIOI&utm_medium=freemium&utm_campaign=Freemium).
 
 == Screenshots ==
-1. User will get different styles options for login with google button 
+
+1. User will get different styles options for login with google button
 2. User login screen can work as normal or via Google's authentication system
 3. Login to Google account - only if not already logged in to Google within the browser
 4. Admin obtains two simple codes from Google to set up - easy instructions to follow 
@@ -195,6 +196,10 @@ Personalized instructions to configure the plugin by registering your site with 
 the WordPress admin panel once you have activated the plugin. For a (non-personalized) preview of these instructions please [click here](https://wp-glogin.com/installing-google-apps-login/basic-setup/).
 
 == Changelog ==
+
+= 3.4.2 =
+
+Updated compatibility with the WordPress 5.5.1 release.
 
 = 3.4.2 =
 
