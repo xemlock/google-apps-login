@@ -197,9 +197,9 @@ the WordPress admin panel once you have activated the plugin. For a (non-persona
 
 == Changelog ==
 
-= 3.4.2 =
+= 3.4.3 =
 
-Updated compatibility with the WordPress 5.5.1 release.
+Updated compatibility with the WordPress 5.6 release.
 
 = 3.4.2 =
 
