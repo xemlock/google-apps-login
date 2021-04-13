@@ -369,7 +369,7 @@ class core_google_apps_login {
 					<span class="google-apps-header '.$loginWithGoogleImage.'">
                         <span class="inner">
                             <span class="icon '.$loginWithGoogleImage.'"></span>
-                            <span>Sign in with Google</span>
+                            <span style="margin-left:10px;">Sign in with Google</span>
                         </span>
                     </span></a>';
 				}elseif (isset($options['btn_google_signin_image']) && !empty($options['btn_google_signin_image']) && $options['btn_google_signin_image'] == 'custom_text') {
