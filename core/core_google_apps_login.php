@@ -190,7 +190,7 @@ class core_google_apps_login {
 			    vertical-align: middle;
 			}
 			span.icon {
-			    background: url(<?php echo $this->my_plugin_url().'img/g-normal.png'?>) transparent 5px 50% no-repeat;
+			    background-image: url(<?php echo $this->my_plugin_url().'/img/google.svg'?>);
 			    display: inline-block;
 			    vertical-align: middle;
 			    width: 42px;
@@ -244,7 +244,7 @@ class core_google_apps_login {
 			    background-repeat: no-repeat;
 			    background-size: auto;
 			    background-position: center;
-			    background-image: url('<?php echo plugin_dir_url( __DIR__ ) ?>/img/google.svg');
+			    background-image: url(<?php echo $this->my_plugin_url().'/img/google.svg'?>);
 			    background-color: #fff;
 			    /*border: 1px solid #4285f4;
 			    border-radius: 2px;*/
