@@ -1,36 +1,36 @@
 === Google Apps Login ===
 Contributors: lionsher, nathansingh, chrisakelley, dimensionmedia
-Tags: login, google, authentication, oauth, google login, google apps, Google Workplace, sso, single-sign-on, auth, intranet, g suite
+Tags: login, google, authentication, oauth, google login, google apps, Google Workspace, sso, single-sign-on, auth, intranet, g suite
 Requires at least: 4.0
 Tested up to: 5.7.2
 Stable tag: 3.4.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Simple secure login and user management through your Google Workplace for WordPress
+Simple secure login and user management through your Google Workspace for WordPress
 (uses secure OAuth2, and MFA if enabled)
 
 == Description ==
 
 Google Apps Login allows existing WordPress user accounts to login to your website using Google to securely authenticate their account. This means that if they are already logged into Gmail for example, they can simply click their way through the WordPress login screen - no username or password is explicitly required!
 
-Google Apps Login uses the latest **secure OAuth2 authentication recommended by Google**, including 2-factor Auth if enabled for your Google Workplace (formerly known as Google Apps and G Suite) accounts.
+Google Apps Login uses the latest **secure OAuth2 authentication recommended by Google**, including 2-factor Auth if enabled for your Google Workspace (formerly known as Google Apps and G Suite) accounts.
 
 This is far simpler to configure than the older SAML protocol.
 
-Google Apps Login is trusted by thousands of organizations from schools to large public companies. Google Apps Login for WordPress is the most popular enterprise grade plugin enabling login and user management based on your Google Workplace domain.
+Google Apps Login is trusted by thousands of organizations from schools to large public companies. Google Apps Login for WordPress is the most popular enterprise grade plugin enabling login and user management based on your Google Workspace domain.
 
-Its plugin setup requires you to have admin access to any Google Workplace domain, or a regular Gmail account, to register and obtain two simple codes from Google.
+Its plugin setup requires you to have admin access to any Google Workspace domain, or a regular Gmail account, to register and obtain two simple codes from Google.
 
 = Support and Premium features =
 
 Full support and premium features are also available for purchase:
 
-Eliminate the need for Google Workplace (previous called Google Apps and G Suite) domain admins to separately manage WordPress user accounts, and get peace of mind only authorized employees have access to your organizations's websites and intranet.
+Eliminate the need for Google Workspace (previous called Google Apps and G Suite) domain admins to separately manage WordPress user accounts, and get peace of mind only authorized employees have access to your organizations's websites and intranet.
 
 **See [our website at wp-glogin.com](https://wp-glogin.com/glogin/?utm_source=Login%20Readme%20Top&utm_medium=freemium&utm_campaign=Freemium) for more details.**
 
-The Premium version allows everyone in your Google Workplace (Google Apps / G Suite) domain to login to WordPress - an account will be automatically created in WordPress if one doesn't already exist.
+The Premium version allows everyone in your Google Workspace (Google Apps / G Suite) domain to login to WordPress - an account will be automatically created in WordPress if one doesn't already exist.
 
 Our Enterprise version goes further, allowing you to specify granular access and role controls based on Google Group or Organizational Unit membership.
 
@@ -57,13 +57,13 @@ Google Apps Login works on single or multisite WordPress websites or private int
 
 One-click login will work for the following domains and user accounts:
 
-*  Google Workplace Starter
-*  Google Workplace Business Standard
-*  Google Workplace Business Plus
-*  Google Workplace Enterprise
-*  Google Workplace for Nonprofits
-*  Google Workplace for Government
-*  Google Classroom (Google Workplace for Education)
+*  Google Workspace Starter
+*  Google Workspace Business Standard
+*  Google Workspace Business Plus
+*  Google Workspace Enterprise
+*  Google Workspace for Nonprofits
+*  Google Workspace for Government
+*  Google Classroom (Google Workspace for Education)
 *  Personal gmail.com and googlemail.com emails
 
 Google Apps Login uses the latest secure OAuth2 authentication recommended by Google. Other 3rd party authentication plugins may allow you to use your Google username and password to login, but they do not do this securely unless they also use OAuth2. This is discussed further in the [FAQ](https://wordpress.org/plugins/google-apps-login/#faq).
@@ -113,11 +113,11 @@ Please feel free to email [contact@wp-glogin.com](mailto:contact@wp-glogin.com) 
 
 We may occasionally be able to respond to support queries posted on the 'Support' forum here on the wordpress.org plugin page, but we recommend sending us an email instead if possible.
 
-= Is login restricted to the Google Workplace domain I use to set up the plugin? =
+= Is login restricted to the Google Workspace domain I use to set up the plugin? =
 
-No, once you set up the plugin, any WordPress accounts whose email address corresponds to *any* Google account, whether on a different Google Workplace domain or even a personal gmail.com account, will be able to use 'Login with Google' to easily connect to your WordPress site.
+No, once you set up the plugin, any WordPress accounts whose email address corresponds to *any* Google account, whether on a different Google Workspace domain or even a personal gmail.com account, will be able to use 'Login with Google' to easily connect to your WordPress site.
 
-However, our [premium plugin](https://wp-glogin.com/glogin/?utm_source=Login%20Readme%20FAQ&utm_medium=freemium&utm_campaign=Freemium) has features that greatly simplify your WordPress user management if your WordPress users are mostly on the same Google Workplace domain(s).
+However, our [premium plugin](https://wp-glogin.com/glogin/?utm_source=Login%20Readme%20FAQ&utm_medium=freemium&utm_campaign=Freemium) has features that greatly simplify your WordPress user management if your WordPress users are mostly on the same Google Workspace domain(s).
 
 = Does the plugin work with HTTP or HTTPS login pages? =
 
@@ -163,7 +163,7 @@ WP Email Login - incompatible with Google Apps Login
 Google Apps Login uses the latest secure OAuth2 authentication recommended by Google. Other 3rd party authentication plugins may allow you to use your Google username and password to login, but they do not always do this securely:
 
 *  Other plugins: Users' passwords may be handled by your blog's server, potentially unencrypted. If these are compromised, hackers would be able to gain access to your Google email accounts! This includes all 
-[Google Workplace apps](https://workspace.google.com/features/) (Gmail, Drive, Calendar etc), and any other services which use your Google account to login.
+[Google Workspace apps](https://workspace.google.com/features/) (Gmail, Drive, Calendar etc), and any other services which use your Google account to login.
 
 *  This plugin: Users' passwords are only ever submitted to Google itself, then Google is asked to authenticate the user to your WordPress site. This means Multi-factor Authentication can still be used (if set up on your Google account). 
 Your website only requires permission to authenticate the user and obtain basic profile data - it can never have access to your emails and other data.
@@ -178,7 +178,7 @@ And you will need a Google account to set up the plugin.
 
 == Installation ==
 
-To set up the plugin, you will need access to a Google Workplace (formally Google Apps / G Suite) domain as an administrator, or just a regular Gmail account.
+To set up the plugin, you will need access to a Google Workspace (formally Google Apps / G Suite) domain as an administrator, or just a regular Gmail account.
 
 Easiest way:
 
