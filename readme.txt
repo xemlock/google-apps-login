@@ -2,7 +2,7 @@
 Contributors: lionsher, nathansingh, chrisakelley, dimensionmedia
 Tags: login, google, authentication, oauth, google login, google apps, Google Workspace, sso, single-sign-on, auth, intranet, g suite
 Requires at least: 4.0
-Tested up to: 5.8.2
+Tested up to: 5.9.0
 Stable tag: 3.4.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
